@@ -1,0 +1,322 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 200px;
+}
+.table-container {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+/* 헤더 */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.left-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* select box */
+.header .select-box {
+  width: 140px;
+  display: flex;
+  height: 48px;
+  align-items: center;
+  gap: 10px;
+  background-color: #f6f6f6;
+}
+.header .select-box select {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222222;
+  padding: 8px 16px;
+  background: url("./icons/select_icon.svg") calc(100% - 16px) center no-repeat;
+  border: none;
+  background-color: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+/* Option 메뉴 스타일 */
+.header .select-box select option {
+  background-color: #f6f6f6; /* option 배경색 */
+  color: #222222; /* option 텍스트 색상 */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+/* 검색바 */
+.header .search-bar {
+  display: flex;
+  width: 260px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #f6f6f6;
+}
+.header .search-bar input {
+  width: 100%;
+  padding: 8px 16px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  background: url("./icons/search_bar.svg") calc(100% - 16px) center no-repeat;
+}
+.header .search-bar input::placeholder {
+  color: #c2c2c2; /* placeholder 색상 */
+}
+
+/* info box  */
+.header .info-box {
+  width: 100%;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid rgba(51, 145, 255, 0.15);
+  background: #f0f9ff;
+}
+.header .info-box .info-data {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header .info-box .info-label {
+  color: #222;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+}
+.header .info-box .span-border {
+  width: 1px;
+  height: 16px;
+  background: rgba(51, 145, 255, 0.2);
+}
+.header .info-box .info-text {
+  color: var(--light-blue, #3391ff);
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+.header .info-box .info-text span {
+  color: var(--light-blue, #3391ff);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* 테이블 css */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+th,
+td {
+  min-width: 60px;
+  height: 44px;
+  border: 1px solid #e5e9f0;
+  text-align: center;
+  color: #192534;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 15px */
+}
+th {
+  background-color: #f5f7f9;
+  font-weight: 600;
+}
+
+tr td:nth-child(2) {
+  color: #3391ff;
+  font-weight: 500;
+}
+tr .error {
+  color: #ed4135 !important;
+  font-weight: 500;
+}
+
+.td-index {
+  width: 60px;
+}
+
+.td-welfare-items {
+  width: 100px;
+}
+
+.td-card-type {
+  width: 90px;
+}
+
+.td-franchisor-name {
+  width: 160px;
+}
+
+.td-address {
+  flex-grow: 1;
+  padding: 0px 24px;
+}
+
+.td-visit-number {
+  width: 75px;
+}
+
+.td-sales {
+  width: 110px;
+}
+
+/* 페이지네이션 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination span,
+.pagination a {
+  text-decoration: none;
+  color: var(--Secondary-GoolGray-CoolGray800, #0f1b2a);
+  font-family: Pretendard;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 18.2px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination a {
+  width: 32px;
+  height: 32px;
+}
+
+a {
+  background-color: none;
+  text-decoration: none;
+  outline: none;
+}
+
+a.active {
+  justify-content: center;
+  align-items: center;
+  background-color: #3391ff;
+  border-radius: 50px;
+  color: var(--Text_04, #fff);
+  font-family: Pretendard;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* 반응형 */
+@media screen and (max-width: 1300px) {
+  body {
+    padding: 0px;
+  }
+  .header {
+    width: 100%;
+    flex-direction: column; /* 다시 컬럼 방향으로 변경 */
+  }
+
+  .header .left-input {
+    width: 100%;
+  }
+
+  .header .select-box {
+    width: 40%;
+    height: 31px; /* 높이 조정 */
+  }
+
+  .header .select-box select {
+    background: url("./icons/select_icon.svg") calc(100% - 12px) center
+      no-repeat;
+    font-size: 14px; /* 폰트 크기 조정 */
+    padding: 8px 12px; /* 패딩 조정 */
+  }
+
+  .header .search-bar {
+    width: 60%;
+    height: 31px; /* 높이 조정 */
+  }
+
+  .header .search-bar input {
+    font-size: 14px; /* 폰트 크기 조정 */
+    padding: 8px 12px; /* 패딩 조정 */
+  }
+
+  .header .info-box {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 104px;
+    padding: 0px 0px;
+  }
+  .span-border {
+    display: none;
+  }
+  .header .info-box .info-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 16px;
+    margin-left: 20px;
+  }
+  .header .info-box .info-data .info-label {
+    width: 75px;
+    font-size: 14px;
+  }
+  .header .info-box .info-data .info-text {
+    font-size: 16px; /* 폰트 크기 조정 */
+  }
+
+  .header .info-box .info-data .info-text span {
+    font-size: 12px; /* 폰트 크기 조정 */
+  }
+
+  .table-box {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 20px;
+  }
+  table {
+    width: 100%;
+  }
+  th,
+  td {
+    min-width: 40px;
+    height: 40px;
+    font-size: 14px;
+    padding: 0 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pagination a:nth-child(n + 8):not(:nth-last-child(-n + 2)) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .pagination a:nth-child(n + 6) {
+    display: none;
+  }
+}

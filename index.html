@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Example</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="table-container">
+      <div class="header">
+        <div class="left-input">
+          <div class="select-box">
+            <select name="categories" id="categories">
+              <option value="welfare-items">복지항목</option>
+              <option value="card-business-type">카드업종명</option>
+              <option value="merchant-name">가맹점명</option>
+            </select>
+          </div>
+          <div class="search-bar">
+            <input
+              type="text"
+              id="search"
+              name="search"
+              placeholder="가맹점 명"
+            />
+          </div>
+        </div>
+
+        <div class="info-box">
+          <div class="info-data">
+            <p class="info-label">매출</p>
+            <p class="info-text">155<span>억</span> 5,656<span>만원</span></p>
+          </div>
+          <span class="span-border"></span>
+          <div class="info-data">
+            <p class="info-label">가맹점 수</p>
+            <p class="info-text">87,000<span>개</span></p>
+          </div>
+          <span class="span-border"></span>
+          <div class="info-data">
+            <p class="info-label">건수</p>
+            <p class="info-text">34,000<span>건</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-box">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <img src="./icons/menu-hamburger.svg" />
+              </th>
+              <th>복지 항목</th>
+              <th>카드 업종명</th>
+              <th>가맹점명</th>
+              <th>주소</th>
+              <th>방문 횟수</th>
+              <th>누적 매출</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="td-index">1</td>
+              <td class="td-welfare-items">생활 지원</td>
+              <td class="td-card-type">편의점</td>
+              <td class="td-franchisor-name">GS25 청주북대점</td>
+              <td class="td-address">
+                충청북도 청주시 흥덕구 집대로 65 (북대동)
+              </td>
+              <td class="td-visit-number">53</td>
+              <td class="td-sales">605,630</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pagination">
+        <a href="#" id="first-prev">
+          <img src="./icons/chevrons-double-left.svg" alt="맨 처음으로" />
+        </a>
+        <a href="#" id="prev">
+          <img src="./icons/chevron-left.svg" alt="이전" />
+        </a>
+        <!-- 페이지 네이션 동적 추가 -->
+        <a href="#" id="next">
+          <img src="./icons/chevron-right.svg" alt="다음" />
+        </a>
+        <a href="#" id="last-next">
+          <img src="./icons/chevron-double-right.svg" alt="맨 끝으로" />
+        </a>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
